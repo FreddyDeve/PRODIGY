@@ -5,7 +5,7 @@
 }
 
 .Animated-background{
-    background: linear-gradient(120deg, rgb(53, 1, 77), rgb(36, 33, 33), #000000); 
+    background: linear-gradient(100deg, rgb(59, 15, 80), rgb(0, 0, 0),  rgb(99, 40, 40)); 
     background-size: 400% 400%;
     animation: gradient-animation 6s ease infinite;
     min-height: 100vh;
@@ -221,7 +221,7 @@ h2 {
     text-decoration: none;
 }
 
-.Project1{
+.Project1 {
     background-color: rgb(77, 54, 35);
     height: 35px;
     width: 120px;
@@ -244,7 +244,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     margin-top: 50px;
-    gap: 40px;
+    gap: 35px;
 }
 
 .Hero-Media {
@@ -416,7 +416,7 @@ section {
 
 .Project-animated {
     margin-top: 100px;
-    background: linear-gradient(120deg, #045835, #0c4a52, #640505); 
+    background: linear-gradient(100deg, #045835, #0c4a52, #272323); 
     background-size: 400% 400%;
     animation: gradient-animation 10s ease infinite;
     min-height: 100vh;
@@ -529,6 +529,17 @@ section {
     text-decoration: none;
 }
 
+.WhatsApp {
+    height: 60px;
+    width: 60px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+    z-index: 1;
+    cursor: pointer;
+    color: #0e0d0d;
+    border-radius: 10px;
+}
+
 
 /* Contact Me */
 ol {
@@ -590,7 +601,7 @@ form {
     text-align: center;
 }
 
-.Form-h2 {
+form h2 {
     color: rgb(61, 41, 5);
     margin-top: 20px;
 }
@@ -682,9 +693,8 @@ footer {
     display: block;
     justify-content: center;
     align-items: center ;
-    gap: 100px;
+    /* gap: 100px; */
     margin-left: 20px;
-    margin-top: 10px;
     text-shadow: 1px 1px 3px rgb(255, 255, 255);
     z-index: 1;
     font-size: 1em;
@@ -722,7 +732,7 @@ footer {
 .Footer-Meida {
     height: 40px;
     width: 70px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     text-shadow: 1px 1px 3px white;
     z-index: 1;
     cursor: pointer;
@@ -733,11 +743,12 @@ footer {
 
 /* MOBILE RESPONSIVENESS */
 /* PHONES */
-@media  (max-width: 480px) {
-    body, .Animated-background {
-        width: 100%;
+@media (min-width: 100px) and (max-width: 599px) {
+    body {
+        width: 150%;
         box-sizing: border-box;
-        padding: 0 10px;
+        padding: 0 5px;
+        margin: 0;
     }
 
     .Nav-Menu {
@@ -881,7 +892,7 @@ footer {
 
     /* Footer */
     .Footer-Navs2 {
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         gap: 15px;
@@ -891,10 +902,11 @@ footer {
 
 /* MEDIUM TABLETS */
 @media (min-width: 768px) and (max-width: 913px) {
-    body, .Animated-background {
-        width: 100%;
+body {
+        width: 150%;
         box-sizing: border-box;
-        padding: 0 10px;
+        padding: 0 5px;
+        margin: 0;
     }
 
     .Nav-Menu {
@@ -1032,7 +1044,7 @@ footer {
 
     /* FOoter */
     .Footer-Navs2 {
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         gap: 15px;
