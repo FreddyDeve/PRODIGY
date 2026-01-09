@@ -7,7 +7,7 @@
 .Animated-background{
     background: linear-gradient(120deg, rgb(53, 1, 77), rgb(36, 33, 33), #000000); 
     background-size: 400% 400%;
-    animation: gradient-animation 10s ease infinite;
+    animation: gradient-animation 6s ease infinite;
     min-height: 100vh;
     padding: 20px;
     box-sizing: border-box;
@@ -152,21 +152,52 @@ h1 {
     text-shadow: 1px 1px 3px white;
     z-index: 1;
     font-size: 3em;
-    font-weight: 400;
+    font-weight: 330;
 }
 
 h2 {
     text-shadow: 1px 1px 3px rgb(241, 234, 234);
     z-index: 1;
     font-size: 3em;
-    font-weight: 400;
+    font-weight: 300;
+}
+
+.Hero-section h2 {
+    text-shadow: 1px 1px 3px rgb(241, 234, 234);
+    z-index: 1;
+    font-size: 3em;
+    font-weight: 300;
 }
 
 .Hero-section h3 {
     text-shadow: 1px 1px 3px rgb(255, 255, 255);
     z-index: 1;
     font-size: 2em;
-    font-weight: 300;
+    font-weight: 150;
+}
+
+/* #text {
+    color:  rgb(230, 215, 215);
+    transition: opacity 0.5s;
+    animation: fade 00.7s infinite;
+}
+
+@keyframes fade {
+    0% {opacity: 0; }
+    50% {opacity: 1; }
+    100% {opacity: 0; }
+} */
+
+#text-rotator {
+    color:  rgb(230, 215, 215);
+    transition: opacity 0.5s;
+    animation: fade 00.7s infinite;
+}
+
+@keyframes fade {
+    0% {opacity: 0; }
+    50% {opacity: 1; }
+    100% {opacity: 0; }
 }
 
 .Hero-padding{
@@ -217,15 +248,20 @@ h2 {
 }
 
 .Hero-Media {
+    height: 80px;
+    width: 120px;
+    margin-bottom: 20px;
     text-shadow: 1px 1px 3px white;
     z-index: 1;
-    font-size: 2em;
-    font-weight: 150;
     cursor: pointer;
-    text-decoration: none;
-    color: #180e0e;
-    
+    color: #0e0d0d;
     border-radius: 100%;
+}
+
+.Hero-Media:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 10px;
+    z-index: 1;
 }
 
 .Hero-Resume {
@@ -331,25 +367,29 @@ section {
 
 .Skills-Section {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 5px;
+    grid-template-columns: repeat(6, 1);
+    gap: 30px;
     cursor: pointer;
+
+    /* justify-content: space-between;
+    align-items: center; */
+
+    /* display: grid; */
 }
 
 .Skill {
     background-color: #0f0f0f;
-    height: 200px;
-    width: 250px;
     border-radius: 8px;
     margin-top: 20px;
     padding: 20px;
-    transition: transform 0.3s, box-shadow;
+    transition: transform 0.6s, box-shadow 0.6s;
     }
 
 .Skill:hover {
-    transform: scale (1.07);
-    box-shadow: 0 0 10px;
+    transform: scale (1.15);
+    box-shadow: 0 0 30px;
     z-index: 1;
 }
 
@@ -497,23 +537,15 @@ ol {
 }
 
 .Contact-Us {
-    /* display: flex;
-    justify-content: center; */
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 80px;
     margin-top: 60px;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
 
 .Contact-Me {
-    border-radius: 100%;
-    background-color: #1a1212;
     border-radius: 8px;
-    box-sizing: border-box;
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .Contact-Me:hover {
@@ -534,6 +566,17 @@ ol {
 
 .Contact-Me ol a {
     text-align:  center;
+}
+
+.Contact-Media {
+    height: 160px;
+    width: 200px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px white;
+    z-index: 1;
+    cursor: pointer;
+    color: #0e0d0d;
+    border-radius: 8px;
 }
 
 
@@ -676,11 +719,21 @@ footer {
     color: rgb(243, 206, 206);
 }
 
+.Footer-Meida {
+    height: 40px;
+    width: 70px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px white;
+    z-index: 1;
+    cursor: pointer;
+    color: #0e0d0d;
+    border-radius: 100%;
+}
 
 
 /* MOBILE RESPONSIVENESS */
 /* PHONES */
-@media (max-width: 599px) {
+@media (max-width: 480px) {
     .Nav-Menu {
         display: none;
     }
@@ -700,9 +753,10 @@ footer {
     }
 
     .My-Picture {
-        height: 250px;
-        width: 230px;
+        height: 280px;
+        width: 260px;
         margin-bottom: 15px;
+        object-position: center;
     }
 
     .Hero-Resume {
@@ -725,9 +779,10 @@ footer {
 
     .About-Photo {
         height: 310px;
-        width: 350px;
+        width: 300px;
         align-items: center;
         align-content: center;
+        object-position: center;
     }
 
     /* Skills section */
@@ -808,6 +863,11 @@ footer {
         margin-bottom: 40px;
     }
 
+    .Contact-Media {
+        height: 60px;
+        width: 80px;
+    }
+
     /* Footer */
     .Footer-Navs2 {
         display: none;
@@ -836,8 +896,8 @@ footer {
     }
 
     .My-Picture {
-        height: 250px;
-        width: 230px;
+        height: 280px;
+        width: 260px;
         margin-top: 20px;
     }
 
@@ -855,10 +915,11 @@ footer {
 
     .About-Photo {
         height: 310px;
-        width: 370px;
+        width: 300px;
         align-items: center;
         align-content: center;
         align-self: center;
+        object-position: center;
     }
 
      /* Skills section */
@@ -937,6 +998,11 @@ footer {
 
     .Contact-Me {
         margin-bottom: 40px;
+    }
+
+    .Contact-Media {
+        height: 60px;
+        width: 80px;
     }
 
     /* FOoter */
